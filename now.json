@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "express-parcel-react-now",
+  "routes": [
+    { "src": "/static/(.*)", "dest": "/dist/$1" },
+    { "src": "/(.*)", "dest": "/server/index.js" }
+  ],
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" },
+    { "src": "server/index.js", "use": "@now/node" }
+  ]
+}
