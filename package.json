@@ -6,7 +6,7 @@
   "scripts": {
     "build": "yarn clean && NODE_ENV=production parcel build src/index.html --public-url=/static",
     "clean": "rimraf dist",
-    "deploy": "now rm express-parcel-react-now && now",
+    "deploy": "yarn build && now rm express-parcel-react-now && now",
     "dev": "NODE_ENV=development PORT=8080 nodemon server/dev-server.js --watch=server",
     "now-build": "yarn build",
     "start": "NODE_ENV=production node server/index.js",
