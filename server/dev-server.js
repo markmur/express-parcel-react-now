@@ -7,7 +7,7 @@ const bundle = new Bundler(entry)
 
 app.use(bundle.middleware())
 
-app.listen(process.env.NODE_ENV, err => {
+app.listen(process.env.PORT, err => {
   if (err) throw err
 
   console.log(`Listening at http://localhost:${process.env.PORT}`)
